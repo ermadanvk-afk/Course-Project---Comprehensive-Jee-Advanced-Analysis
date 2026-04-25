@@ -122,26 +122,37 @@ selection = option_menu(
 )
 # --- 1. HOME SECTION ---
 if selection == "Home":
-    st.title("JEE Advanced Analysis ")
+    st.title("JEE Advanced Analysis")
+    
+    # Updated parameter to avoid the deprecation warning
+    st.image("image/iit.jpg", caption="Do you know? IIT Roorkee :Has been Renowned College, specially for Civil Engg. Known as Thomson College of Civil Engineering in Older Times", use_container_width=True)
+
     st.subheader("Brief Description of previous 10+ years")
+    
     st.write("""
     JEE Advanced is one of the toughest engineering entrance exams globally. 
-    Through this analysis the analyst wants to acknowledge viewers with 
-    the various hidden statistical inferences of the exam. Whether, it is:
-    1. Cut-off trends over the years.
-    2. Female Participation over years.
-    3. Registration fee Evolution.
-    4. Occupation of Parents of the selected students
-    Many More....
+    Through this analysis, the analyst wants to acknowledge viewers with 
+    the various hidden statistical inferences of the exam. Whether it is:
     
-    Also, There are two helpful tools
-    1. Rank predictor
-    2. College predictor
-             
-    Whether, you are researching or surfing, Just give it a Try...
+    * **Cut-off trends** over the years.
+    * **Female Participation** over the years.
+    * **Registration fee** evolution.
+    * **Parental Occupation** of selected students.
+    
+    And many more...
     """)
-    st.info("Explore more using above Menu Bar")
 
+    st.markdown("### 🛠️ Integrated Tools")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.success("**1. Rank Predictor**")
+    with col2:
+        st.success("**2. College Predictor**")
+             
+    st.write("Whether you are researching or surfing, just give it a try!")
+    st.info("Explore more using the Menu Bar above.")
+
+   
 # --- 2. DIFFICULTY LEVEL ANALYSIS ---
 elif selection == "Difficulty Level":
     st.title("Difficulty Level Analysis")
@@ -158,7 +169,7 @@ elif selection == "Difficulty Level":
         "heading": "2. Cutoff % vs Highest Score % vs Avg Score % (Static View)",
         "type": "image", 
         "file": "image/02_score_percentages.png", 
-        "text": "It is not strange to note that, in the exam where the topper is scoring the marks greater than 80 percent approx every year but the cutoff for open-general category is prone to below 40 percent. This show the real level and Toughness of the examination. It is the exam, where the average score of the candidates is not even 20 percent."
+        "text": "It is not strange to note that, in the exam where the topper is scoring marks greater than 80 percent approx. every year, the cutoff for the open-general category is prone to being below 40 percent. This shows the real level and toughness of the examination. It is the exam, where the average score of the candidates is not even 20 percent."
     },
     {
         "heading": "3. Interactive Score Distribution Dashboard", 
@@ -167,7 +178,7 @@ elif selection == "Difficulty Level":
         "text": "I would like to draw your attention to the curious point, In year 2024 for the first time someone scored the score of greater than 98 percent in such a examination. The student who scored is Chidvilas Reddy"
     },
     {
-        "heading": "4. Subject-wise Average Marks Trend", 
+        "heading": "4. Subject-wise Average Marks Trend using z-scores", 
         "type": "image",
         "file": "image/03_subject_avg_trend.png",
         "text": '''Chemistry:\n
@@ -204,10 +215,10 @@ Maths:\n
         "heading": "6. Toughness Index (Composite Analysis)",
         "type": "image", 
         "file": "image/05_toughness_index.png", 
-        "text": "2022 Set By IIT Bombay Tested the student's mind on complex math and physics concepts. While 2017 IIT Madras Served as the Easied Year in JEE Advanced History."
+        "text": "2022 Set By IIT Bombay Tested the student's mind on complex math and physics concepts. While in 2017, IIT Madras Served as the Easied Year in JEE Advanced History."
     },
     {
-        "heading": "7. Topper vs Cutoff Gap (Elite vs Minimum)",
+        "heading": "7. Topper vs Cutoff Gap (Zenith vs Minimum)",
         "type": "image", 
         "file": "image/06_topper_vs_cutoff.png", 
         "text": "The difference between the topper and the General cutoff is between 200-300 range for max of the year, but the year 2015 served as the year with highest maximum marks 504, along with the fact that difference between topper and cutoff is extreme outlier, definitely the topper has exceptional talent to score such high. That candidate :  Satvat Jagwani"
@@ -336,7 +347,7 @@ elif selection == "Gender Wise Analysis":
 
     # Gender Section Conclusion
     st.markdown("## 🏁 Conclusion: Gender Diversity")
-    st.info("Gender-neutral seats Along with Supernumerary seats made IITs more.")
+    st.info("Gender-neutral seats Along with Supernumerary seats made IITs more Inclusive.")
 
 elif selection == "Parent Occupation":
     st.title("Parent's Occupation Analysis")
@@ -391,7 +402,7 @@ elif selection == "Parent Occupation":
 
 
 elif selection == "Fee Analysis":
-    st.title("Money Matrix")
+    st.title("Fee Analysis")
     st.markdown("### Analysing how the registeration fee and IIT fee changed over Time")
     st.write("The absolute Inflation in premier higher Education Institution")
     st.markdown("---")
@@ -460,7 +471,12 @@ elif selection == "Category Analysis":
         {
             "heading": "Applicants vs Qualifiers — Category-wise Deep Dive (2013–2025)",
             "file": "image/24_category_deepdive.png", 
-            "text": "The applicant count in the General category is relatively flat (~58–70K post-2013) but qualifiers are increasing slowly — 24K peak in 2025 — suggesting paper getting slightly more predictable or coaching improving. OBC applicants spike suddenly in 2023-24 (~67K) — possibly awareness or coaching ecosystem growth. The qualifier counts in SC and ST saw an anomalous spike in 2016-17 — that year perhaps SC/ST reservation seats were increased or the paper was relatively easier for them. The selection rate in the ST category is the most volatile — even a single change in the small pool gives a big swing in the percentage."
+            "text": '''\nGeneral Category : The No. of students appearing in examination have always been higher in numbers,that is held accountable by the fact that most of general candidates are well aware of the examination. Since, good chunk of general population have atleast one parent educated in the family, execeptions are excused.The advantage is clearly visible through the selection rate in various years.
+            \nOBC Category : The number of students taking the examination though comparable enough with general students. But, the selection rate is relative lower than as compared to general students.The difference is probably due to the unavailability of mentorship and guidance. Since, a good chunk of OBC student have both parents not even completed high school education.
+            \nSC Category : The participation from these students have been comparatively on lower side. But, the slection ratio has changed abrupty showing increasing selection rates.
+            \nST Category : The most vulnerable students in the examination. Though government gave reservation to the ST students but the participation from them stood on extreme lower side.
+            The possible reason could be their social and economical condition are highly unstable, which creates the difficulty for student to even pursue studying.\n
+            '''
         }
     ]
 
