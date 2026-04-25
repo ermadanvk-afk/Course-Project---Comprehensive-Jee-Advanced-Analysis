@@ -475,8 +475,7 @@ elif selection == "Category Analysis":
             \nOBC Category : The number of students taking the examination though comparable enough with general students. But, the selection rate is relative lower than as compared to general students.The difference is probably due to the unavailability of mentorship and guidance. Since, a good chunk of OBC student have both parents not even completed high school education.
             \nSC Category : The participation from these students have been comparatively on lower side. But, the slection ratio has changed abrupty showing increasing selection rates.
             \nST Category : The most vulnerable students in the examination. Though government gave reservation to the ST students but the participation from them stood on extreme lower side.
-            The possible reason could be their social and economical condition are highly unstable, which creates the difficulty for student to even pursue studying.\n
-            '''
+            The possible reason could be their social and economical condition are highly unstable, which creates the difficulty for student to even pursue studying.\n'''
         }
     ]
 
