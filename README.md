@@ -32,4 +32,5 @@ This concludes a multifaceted analysis of India's most prestigious engineering e
 The data reveals a complex narrative: from the commendable impact of government initiatives designed to boost female participation and the representation of underprivileged backgrounds, to the rising concerns regarding IIT fee structures. Ultimately, this study encourages viewers to appreciate the sheer scale and demand of the examination while acknowledging the systemic shifts occurring over the last 14 years.
 8. Project Access
 Interactive dashboard link: 
-https://course-project---comprehensive-jee-advanced-analysis-bxfpjkhyy.streamlit.app/
+https://comprehensive-jee-advanced-analysis-bxfpjkhyy.streamlit.app/
+
